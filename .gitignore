@@ -1,0 +1,65 @@
+#Visual Studio
+.vs/
+
+*.slo
+*.lo
+*.o
+*.obj
+# Precompiled Headers
+*.gch
+*.pch
+
+#Complied Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+#Fortran module Files
+*.mod
+#Compiled static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+#Executables
+*.exe
+*.out
+*.app
+*.ipa
+
+#Generated files by engine
+*.xcodeproj
+*.xcworkspace
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+
+#Precompiled Assets
+SourceArt/**/*.png
+SourceArt/**/*.tga
+
+#Binary Files
+Binaries/*
+Plugins/*/Binaries/*
+
+#Builds
+Build/*
+
+!Build/*/
+Build/*/**
+!Build/*/PakBlacklist*.txt
+
+!Build/**/*.ico
+
+*_BuiltData.uasset
+
+Saved/*
+
+Intermediate/*
+Plugins/*/Intermediate/*
+
+DerivedDataCache/*
