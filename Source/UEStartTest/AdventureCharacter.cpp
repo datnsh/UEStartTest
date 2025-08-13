@@ -12,7 +12,11 @@ AAdventureCharacter::AAdventureCharacter()
 
 void AAdventureCharacter::Move(const FInputActionValue& Value) 
 {
-
+	const FVector2D MovementValue = Value.Get<FVector2D>();
+	if (Controller) {
+		const FVector2D Right = GetActorRightVector();
+		AddMovementInput(Right, MovementValue.X);
+	}
 }
 
 // Called when the game starts or when spawned
