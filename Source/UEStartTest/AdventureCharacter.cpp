@@ -36,7 +36,11 @@ void AAdventureCharacter::Tick(float DeltaTime)
 // Called to bind functionality to input
 void AAdventureCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
+	if (UEnhancedInputComponent* EnhancedInputComponent = CastChecked<UEnhancedInputComponent>(PlayerInputComponent)) 
+	{
+		EnhancedInputComponent->BindAction(MoveAction, ETriggerEvent::Triggered, this, &AAdventureCharacter::Move());
+		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &AAdventureCharacter::Jump());
+	}
 
 }
 
